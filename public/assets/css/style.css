@@ -1,0 +1,75 @@
+@font-face {
+				font-family:'myria';
+				font-style: normal;
+				src:
+				url('/assets/fonts/MyriadPro-Cond.eot') format('eot'),
+				url('/assets/fonts/MyriadPro-Cond.ttf') format('ttf'),
+				url('/assets/fonts/MyriadPro-Cond.woff') format('woff'),
+				url('/assets/fonts/MyriadPro-Regular.eot') format('eot'),
+				url('/assets/fonts/MyriadPro-Regular.ttf') format('ttf'),
+				url('/assets/fonts/MyriadPro-Regular.woff') format('woff');
+}
+.body {
+	background-image: url("/assets/img/index.jpg") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    font-family: 'myria';
+}
+.welcome {
+	font-family: 'myria';
+	font-size: 53px;
+}
+
+.welcomeBox {
+	color: white !important;
+	width: 477px !important;
+    position: absolute !important;
+    top: 211px !important;
+	right: 91px !important;
+	background-color: #030101 !important;
+	opacity: 0.6 !important;
+}
+.welcomeBtn {
+	width: 159px;
+	font-size: 20px !important;
+}
+.welcomeBox:hover {
+    width: 500px !important;
+}
+.welcomeDescription{
+	display: none;
+}
+.welcomeBox:hover .welcomeDescription {
+    display: block !important; 
+}
+.signup {
+	background-image: url("/assets/img/signup.jpg") !important;
+    background-repeat: no-repeat !important;
+    font-family: 'myria';
+    background-size: cover;
+    height: 100%; 
+}
+.login {
+	background-image: url("/assets/img/login.jpg") !important;
+    background-repeat: no-repeat !important;
+    /*background-position: center !important;*/
+    font-family: 'myria';
+  /*  background-position: center;
+    background-repeat: no-repeat;*/
+    background-size: cover;
+    height: 100%; 
+}
+.loginBox {
+	background-color: #92b7c0;	
+	opacity: 0.8;
+	border-color: white !important;
+	border-style: solid;
+	border-width: thin;
+	margin-top: 70px !important;
+	margin-left: 20px !important;
+	font-size: 16px !important;
+}
+.profile {
+	font-family: 'myria';
+	font-size: 18px;
+}

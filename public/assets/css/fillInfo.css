@@ -1,0 +1,15 @@
+@font-face {
+				font-family:'myria';
+				font-style: normal;
+				src:
+				url('/assets/fonts/MyriadPro-Cond.eot') format('eot'),
+				url('/assets/fonts/MyriadPro-Cond.ttf') format('ttf'),
+				url('/assets/fonts/MyriadPro-Cond.woff') format('woff'),
+				url('/assets/fonts/MyriadPro-Regular.eot') format('eot'),
+				url('/assets/fonts/MyriadPro-Regular.ttf') format('ttf'),
+				url('/assets/fonts/MyriadPro-Regular.woff') format('woff');
+}
+.fillIn {
+    font-family: 'myria' !important;
+    background-color: white;
+}

@@ -1,0 +1,71 @@
+<head>
+	<style>
+		table {
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
+		td, th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+
+	</style>
+</head>
+<h1>hello world</h1>
+<div class="form-group">
+	<label for="noteTitle">Title</label>
+	<input type="text" class="form-control" id="noteTitle"  placeholder="Enter title">
+	<small class="form-text text-muted">Note Title</small>
+</div>
+<div class="form-group">
+	<label for="noteContent">Content</label>
+	<input type="text" class="form-control" id="noteContent"  placeholder="Enter content">
+	<small class="form-text text-muted">Note Content</small>
+</div>
+<div>
+	<button id="Submit" onclick="submitNote()">Submit</button>
+</div>
+
+<table id="notes">
+	<tr>
+		<th>title</th>
+		<th>content</th>
+		<th>remove</th>
+		<th>edit</th>
+	</tr>
+</table>
+
+<script type="text/javascript">
+	function submitNote() {
+		let title =  document.getElementById("noteTitle").value;
+		let content =  document.getElementById("noteContent").value;
+		if((title != null) && (content!= null)) {
+			sendAjax(title,content);
+		}
+	}
+	function sendAjax(title,content){
+		$.ajax({
+			url: "/notes",
+            method: "post",
+            dataType: "json",
+            data: {title: title, content: content},
+            success: function(data){
+            	$("#noteTitle").val('');
+				$("#noteContent").val('');
+                $('table#notes').append(
+					'<tr>'+
+						'<td>' + data.title +'</td>' +
+						'<td>' + data.content +'</td>' +
+					'</tr>'
+                )  
+            }
+        });
+	}
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
